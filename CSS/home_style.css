@@ -1,0 +1,1028 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.81), rgba(4, 9, 30, 0.7)),
+    url(https://media.bleacherreport.com/w_800,h_533,c_fill/br-img-images/002/546/158/hi-res-168167196-ronnie-osullivan-of-england-poses-with-the-trophy-and_crop_north.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  font-family: "Oswald", Courier, monospace;
+}
+
+nav {
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav img {
+  width: 60px;
+  border: 3px solid rgb(72, 72, 72);
+  border-radius: 50px;
+  transition: 0.5s;
+}
+
+nav img:hover {
+  background-color: gray;
+}
+
+.nav-links {
+  flex: 1;
+  text-align: right;
+}
+
+.nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+
+.nav-links ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.nav-links ul li::after {
+  content: "";
+  width: 0%;
+  height: 4px;
+  background: #08e400;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+  width: 100%;
+}
+
+.text-box {
+  width: 90%;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 33%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-weight: bold;
+}
+
+.text-box h1 {
+  font-size: 60px;
+  letter-spacing: 2px;
+}
+
+.text-box p {
+  margin: 10px 0 40px;
+  font-size: 25px;
+  letter-spacing: 2px;
+  color: #fff;
+  
+}
+
+.button {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  border: 2px solid white;
+  letter-spacing: 2px;
+  padding: 15px 40px;
+  font-size: 25px;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.button:hover {
+  border: 2px solid #08e400;
+  background-color: #08e400;
+  transition: 0.7s;
+}
+
+nav .fa {
+  display: none;
+}
+
+@media (max-width: 1400px) {
+  .text-box {
+    top: 50%;
+    left: 50%;
+  }
+}
+
+@media (max-width: 700px) {
+  .text-box h1 {
+    font-size: 40px;
+    letter-spacing: 1px;
+  }
+  .text-box {
+    top: 50%;
+    left: 50%;
+  }
+  .text-box p {
+    margin: 10px 20px 40px;
+    font-size: 17px;
+    letter-spacing: 1px;
+  }
+  .nav-links ul li {
+    display: block;
+  }
+  .nav-links {
+    position: absolute;
+    background-color: #08e400;
+    height: 100vh;
+    width: 230px;
+    top: 0;
+    right: -230px;
+    text-align: left;
+    z-index: 2;
+    transition: 0.75s;
+  }
+  nav .fa {
+    display: block;
+    color: #fff;
+    margin: 20px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+  .nav-links ul {
+    padding: 30px;
+  }
+  .nav-links ul li {
+    padding-top: 20px;
+  }
+}
+
+/* -------comments------- */
+
+.comments {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+  font-family: "Arima", Courier, monospace;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 900;
+}
+
+p {
+  font-size: 20px;
+  font-weight: 400;
+  color: #777;
+}
+
+.comments-row {
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.comments-col {
+  flex-basis: 30%;
+  background: #eeffee;
+  padding: 30px 20px 30px;
+  border-radius: 15px;
+  margin-bottom: 5%;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+
+.comments-col h3 {
+  font-size: 25px;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.comments-col:hover {
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+  
+}
+
+@media (max-width: 700px) {
+  .comments-row {
+    flex-direction: column;
+  }
+}
+
+/* -------World's top 3 players------- */
+
+.top-players {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 80px;
+  font-family: "Arima", Courier, monospace;
+}
+
+.row {
+  margin-top: 3%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.players-col {
+  flex-basis: 30%;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.players-col img {
+  width: 100%;
+  display: block;
+}
+
+.layer {
+  background: transparent;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+}
+
+.layer:hover {
+  background: #08e400a4;
+}
+
+.layer h3 {
+  width: 100%;
+  font-weight: 700;
+  color: #fff;
+  font-size: 30px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.layer:hover h3 {
+  bottom: 49%;
+  opacity: 1;
+}
+
+@media (max-width: 700px) {
+  .row {
+    flex-direction: column;
+  }
+}
+
+/* -------Top Achievements-------  */
+
+.achievements {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+  font-family: "Arima", Courier, monospace;
+}
+
+.ach-row {
+  /* margin-top: 10px; */
+  display: flex;
+  /* justify-content: space-between; */
+}
+
+.ach.col {
+  flex-basis: 27%;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.ach-col img {
+  width: 400px;
+  height: 320px;
+  padding: 55px;
+  border-radius: 50%;
+  display: block;
+  transition: 1s;
+}
+
+.ach-col h3 {
+  font-size: 20px;
+}
+.ach-col p {
+  font-size: 17px;
+}
+
+.ach-col img:hover {
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+  
+}
+
+@media (max-width: 700px) {
+  .ach-row {
+    flex-direction: column;
+  }
+
+  .ach-col img {
+    width: 300px;
+    height: 240px;
+    padding: 0px;
+    border-radius: 50%;
+    display: block;
+  }
+  .ach-col h3 {
+    padding-top: 30px;
+  }
+  .ach-col p {
+    padding-bottom: 40px;
+  }
+}
+
+/* -------Our Students------- */
+
+.students {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+  font-family: "Arima", Courier, monospace;
+}
+
+.students-row {
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.students-col {
+  flex-basis: 30%;
+  background: #eeffee;
+  padding: 30px 20px 30px;
+  border-radius: 15px;
+  margin-bottom: 5%;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+
+.students-col h3 {
+  font-size: 25px;
+  font-weight: 900;
+  margin-bottom: 20px;
+  margin-right: 80px;
+}
+
+.students-col img {
+  width: 50px;
+  clip-path: circle(50% at 50% 50%);
+  margin-left: 50px;
+  float: left;
+}
+
+.students-col:hover {
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+  
+}
+
+@media (max-width: 700px) {
+  .students-row {
+    flex-direction: column;
+  }
+}
+
+/* -------Call to action------- */
+
+.cta {
+  margin: 100px auto;
+  width: 80%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(./Media/Images/snooker\ table.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+  text-align: center;
+  padding: 150px 0;
+  font-family: "Oswald", Courier, monospace;
+}
+
+.cta h1 {
+  color: #fff;
+  margin-bottom: 40px;
+  padding: 0;
+}
+
+@media (max-width: 700px) {
+  .cta h1 {
+    font-size: 20px;
+    padding: 20px;
+  }
+}
+
+/* <!-- -------footer------- --> */
+
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 30px 0;
+}
+
+.footer h4 {
+  margin-bottom: 25px;
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: 30px;
+  font-family: "Arima", Courier, monospace;
+}
+
+.icons {
+  padding: 10px;
+}
+
+.icons .fa {
+  color: #136610;
+  padding: 10px 10px;
+  cursor: pointer;
+}
+
+.myimage {
+  width: 50px;
+  border-radius: 50%;
+  margin-top: 40px;
+}
+
+.myname {
+  color: rgba(34, 34, 34, 0.79);
+  font-size: 25px;
+  font-family: "Arima", Courier, monospace;
+  font-weight: 500;
+}
+
+/* A B O U T     U S     P A G E */
+
+body {
+  font-family: "Arima", Courier, monospace;
+}
+
+.sub-header {
+  height: 50vh;
+  width: 100vw;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.81), rgba(4, 9, 30, 0.7)),
+    url(./Media/Images/Pool\ Table.jpg);
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  color: white;
+  font-family: "Oswald", Courier, monospace;
+}
+
+.sub-header h1 {
+  font-size: 80px;
+  margin-top: 100px;
+}
+
+.about-us {
+  display: flex;
+  width: 75%;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-row {
+  display: flex;
+  padding: 100px 58px;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 100%;
+  text-align: center;
+}
+
+.about-col img {
+  width: 80%;
+  border-radius: 50%;
+  margin-left: 100px;
+  transition: 0.5s;
+}
+
+.about-col img:hover {
+  box-shadow: 0 0 20px;
+  transform: scale(1.06);
+}
+
+.about-col h1 {
+  font-size: 40px;
+  line-height: 60px;
+  padding-bottom: 25px;
+}
+.about-col p {
+  font-size: 20px;
+  line-height: 40px;
+  padding-bottom: 25px;
+}
+
+.explore-btn {
+  display: inline-block;
+  text-decoration: none;
+  color: #08e400;
+  border: 2px solid #08e400;
+  letter-spacing: 2px;
+  padding: 15px 40px;
+  font-size: 25px;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: 0.7s;
+}
+
+.explore-btn:hover {
+  border: 2px solid #08e400;
+  background-color: #08e400;
+  color: #fff;
+  transform: scale(1.06);
+}
+
+@media (max-width: 700px) {
+  .sub-header h1 {
+    font-size: 60px;
+  }
+  .about-row {
+    display: block;
+    margin: 0;
+    margin-top: 40px;
+    padding: 0;
+  }
+  .about-col {
+    /* display: inline; */
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+  }
+
+  .about-col h1 {
+    font-size: 30px;
+    line-height: 40px;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+
+  .about-col p {
+    font-size: 17px;
+    line-height: 27px;
+  }
+  .about-col img {
+    display: none;
+  }
+  .explore-btn{
+    margin: 0;
+    margin-bottom: 50px;
+  }
+  .footer p{
+    padding: 25px;
+  }
+}
+
+/* T O U R N A M E N T S       P A G E */
+
+.sub-header3 {
+  height: 50vh;
+  width: 100vw;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.81), rgba(4, 9, 30, 0.7)),
+    url(./Media/Images/Tournaments\ page.jpg);
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  color: white;
+  font-family: "Oswald", Courier, monospace;
+}
+
+.sub-header3 h1{
+  margin-top: 90px;
+  font-size: 60px;
+}
+
+.tournaments > h1 {
+  padding-top: 100px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.tournaments-row {
+  display: flex;
+  justify-content: center;
+}
+
+.tournaments-col {
+  padding: 20px;
+}
+
+.tournaments img {
+  width: 450px;
+  height: 60%;
+  border-radius: 20px;
+  margin: 20px;
+  transition: 0.3s;
+}
+
+.tournaments img:hover {
+  box-shadow: 0 0 20px;
+  transform: scale(1.05);
+}
+
+.tournaments-col h1 {
+  font-size: 35px;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.tournaments-col p {
+  text-align: center;
+  font-size: 20px;
+  padding-top: 10px;
+  margin-bottom: 100px;
+}
+
+@media (max-width: 700px) {
+  .tournaments-row {
+    display: block;
+  }
+
+  .tournaments img {
+    width: 300px;
+  }
+
+  .tournaments-col p {
+    margin-bottom: 30px;
+  }
+}
+
+
+
+/* R O C K E T      P A G E */
+
+
+.sub-header4 {
+  height: 75vh;
+  width: 100vw;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.81), rgba(4, 9, 30, 0.7)),
+    url(./Media/Images/ronnie\ with\ trophy.jpg.jpg);
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  color: white;
+  font-family: "Oswald", Courier, monospace;
+}
+
+.text-box2 {
+  width: 90%;
+  color: white;
+  position: absolute;
+  top: 38%;
+  left: 28%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-weight: bold;
+}
+
+.text-box2 h1 {
+  margin-bottom: 30px;
+  font-size: 60px;
+  letter-spacing: 2px;
+}
+
+.text-box2 p {
+  margin: 10px 0 40px;
+  font-size: 30px;
+  letter-spacing: 2px;
+  color: #fff;
+  
+}
+
+
+
+.questions{
+  display: block;
+  /* display: flex; */
+  width: 54%;
+  margin: auto;
+}
+
+.questions-row{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.questions-row p{
+  margin-top: 10px;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+
+.personal{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.personal-row{
+  width: 54%;
+  display: flex;
+  flex-direction: column;
+  /* border: 2px solid red; */
+  margin-bottom: 20px;
+}
+
+.personal-row h1{
+  margin-bottom: 20px;
+}
+
+.personal-row div{
+  display: flex;
+  flex-direction: column;
+  border-left: 2px solid green ;
+  /* margin-right: 10px; */
+  padding-left: 25px;
+  font-style: italic;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+.personal h3 {
+font-size: 23px;
+padding: 6px;
+}
+.personal p {
+font-size: 17px;
+padding: 6px;
+margin-bottom: 8px;
+}
+
+
+
+.snooker{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.snooker-row{
+  width: 54%;
+  display: flex;
+  flex-direction: column;
+  /* border: 2px solid red; */
+  margin-bottom: 20px;
+}
+
+.snooker-row h1{
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+.snooker-col{
+  display: flex;
+  flex-direction: column;
+  border-left: 2px solid green ;
+  /* margin-right: 10px; */
+  padding-left: 25px;
+  font-style: italic;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+.snooker h3 {
+font-size: 23px;
+padding: 6px;
+}
+.snooker p {
+font-size: 17px;
+padding: 6px;
+margin-bottom: 8px;
+}
+
+.snooker img{
+  margin-bottom: 50px;
+}
+
+.snooker-col iframe{
+  width: 95%;
+  height: 500px;
+  padding: 20px;
+}
+
+.snooker>p{
+  width: 54%;
+  text-align: justify;
+}
+.table{
+  display: block;
+  width: 54%;
+  margin: auto;
+}
+#t-col{
+  font-weight: bold;
+}
+
+table,td{
+  border: 2px solid black;
+  border-collapse: collapse;
+  padding: 10px;
+  text-align: center;
+}
+.table h2{
+  margin: 20px 0;
+}
+.world-title{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wt-row{
+  display: flex;
+  flex-direction: column;
+  width: 54%;
+  align-items: center;
+
+}
+
+.wt-col{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.wt-col h1{
+  font-size: 38px;
+  margin-top: 25px;
+}
+
+.wt-col p{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+.academy h2{
+  text-align: center;
+  margin: 30px 0;
+  font-size: 45px;
+  font-family:'Oswald', Courier, monospace;
+}
+.academy span{
+  font-family:'Arima', Courier, monospace;
+  letter-spacing: 0px;
+  font-size: 30px;
+  
+  
+}
+.academy-row{
+  display: flex;
+  justify-content: center;
+}
+
+.academy-col{
+  width: 450px;
+  margin: 20px;
+}
+.academy-col img{
+  width: 450px;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+.academy-col img:hover{
+  transform: scale(1.05);
+  box-shadow: 0 0 10px;
+}
+.academy-col h3{
+  font-size: 27px;
+  text-align: center;
+}
+
+footer{
+  text-align: center;
+  background-color: rgb(52, 52, 52);
+  padding: 10px;
+  font-family: 'Oswald', Courier, monospace;
+}
+footer p{
+  color: #fff;
+  letter-spacing: 2px;
+}
+hr{
+  border: 1px solid black;
+}
+
+@media (max-width: 700px){
+  .text-box2 h1 {
+    font-size: 40px;
+    letter-spacing: 1px;
+  }
+  .text-box2 {
+    top: 40%;
+    left: 50%;
+  }
+  .text-box2 p {
+    margin: 10px 20px 40px;
+    font-size: 17px;
+    letter-spacing: 1px;
+  }
+
+  .questions{
+    width: 85%;
+  }
+  .questions-row h1{
+    font-size: 39px;
+  }
+  .questions-row p{
+    font-size: 15px;
+  }
+  .questions-row img{
+    width: 100%;
+  }
+
+
+  .personal-row{
+    width: 85%;
+  }
+  .personal-row h1, h3, p{
+    text-align: center;
+  }
+  .personal-row div{
+    border: none;
+    padding-left: 0px;
+  }
+  .personal img{
+    width: 100%;
+  }
+  .snooker-row{
+    width: 85%;
+  }
+
+  .snooker-row h1, h3,p{
+    text-align: center;
+  }
+  .snooker-col{
+    border: none;
+    padding-left: 0px;
+  }
+  .snooker-col iframe{
+    height: 20vh;
+    padding: 6px;
+  }
+  .wt-row{
+    width: 80%;
+  }
+  .wt-col h1{
+    font-size: 30px;
+    text-align: center;
+  }
+  .wt-col p{
+    font-size: 15px;
+  }
+  .wt-col img{
+    width: 100%;
+  }
+  .academy{
+    width: 85%;
+    display: block;
+    margin: auto;
+  }
+  .academy-row{
+    flex-direction: column;
+  }
+  .academy-col{
+    width: 290px;
+  }
+  .academy-col img{
+    width: 290px;
+  }
+  .academy h2{
+    margin: 20px 0;
+    line-height: 60px;
+  }
+}
+
+#bttn{
+  padding: 10px 15px;
+  background-color: #08e4008d;
+  margin: 20px
+}

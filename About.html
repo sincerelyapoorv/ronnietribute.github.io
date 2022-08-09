@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Charis+SIL&family=Dancing+Script:wght@700&family=Lobster&family=Oswald:wght@200&family=Patrick+Hand&family=Tinos&display=swap");
+    </style>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Arima:wght@100;400;500;700&family=Charis+SIL&family=Dancing+Script:wght@700&family=Lobster&family=Oswald:wght@200&family=Patrick+Hand&family=Tinos&display=swap");
+    </style>
+
+    <link rel="stylesheet" href="./CSS/home_style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <section class="sub-header">
+      <nav>
+        <a href="./index.html"
+          ><img src="./CSS/Media/Images/Logo.png" alt=""
+        /></a>
+        <div class="nav-links" id="navlinks">
+          <i class="fa fa-times" onclick="hidemenu()"></i>
+          <ul>
+            <li><a href="./index.html">HOME</a></li>
+            <li><a href="./Tournaments.html">TOURNAMENTS</a></li>
+            <li><a href="">ARTICLES</a></li>
+            <li><a href="./Rocket.html">ROCKET</a></li>
+            <li><a href="./About.html">ABOUT US</a></li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showmenu()"></i>
+      </nav>
+      <h1>About Us</h1>
+    </section>
+      
+    
+      
+
+    <!-- about us -->
+
+
+    
+<section class="about-us">
+  <div class="about-row">
+    <div class="about-col">
+      <h1>We are the biggest snooker academy in Delhi</h1>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, at accusantium! Ipsa omnis facilis, nostrum magnam dolores tempore, tenetur eius accusantium ut libero eum doloremque repellat quam deserunt alias dolore! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia, tempore. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id, voluptatem.</p>
+      <a href="#" class="explore-btn">Explore Now</a>
+    </div>
+    <div class="about-col">
+      <img src="./CSS/Media/Images/Ronnie image for about page.jpg" alt="">
+    </div>
+  </div>
+</section>
+
+<hr>
+
+
+    <!-- -------footer------- -->
+
+
+
+    
+
+    <section class="footer">
+      <h4>About Us</h4>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores odit,
+        molestias, distinctio obcaecati qui, molestiae laudantium rerum neque at
+        asperiores quam. Fugiat, <br />
+        cumque! Recusandae dignissimos maxime, a impedit illo magni quae iusto,
+        dolorum eaque nobis excepturi porro? Veritatis mollitia aspernatur porro
+        quas asperiores, <br />
+        eos nihil sunt, illo in nobis saepe.
+      </p>
+
+      <div class="icons">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-linkedin"></i>
+      </div>
+
+      <img src="./CSS/Media/Images/Apoorv.jpeg" class="myimage" />
+
+      <p class="myname">Made by Apoorv Singh</p>
+    </section>
+
+    <!-- -------javascript for toggle menu-------  -->
+    <script>
+      var navlinks = document.getElementById("navlinks");
+      function showmenu() {
+        navlinks.style.right = "0";
+      }
+      function hidemenu() {
+        navlinks.style.right = "-230px";
+      }
+    </script>
+  </body>
+</html>
